@@ -1,26 +1,26 @@
 class ClawHooks < Formula
   desc "Hooks CLI for AI coding agents (Claude Code, Cursor, Windsurf)"
   homepage "https://github.com/owayo/claw-hooks"
-  version "26.2.103"
+  version "26.2.104"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.103/claw-hooks-aarch64-apple-darwin.tar.gz"
-      sha256 "1639438cf9f21976b5e61db12b1d5bb41044d7875fb748dfd59fb20740d2ddec"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.104/claw-hooks-aarch64-apple-darwin.tar.gz"
+      sha256 "84a0b51cdd2014736a45406095950ded7112d86da8e624a70fa633555000c244"
     else
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.103/claw-hooks-x86_64-apple-darwin.tar.gz"
-      sha256 "d9b8516e0fccddb27efc51e8520c5071696005371c8573d147f63ef1941d58d3"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.104/claw-hooks-x86_64-apple-darwin.tar.gz"
+      sha256 "ff3158da1dbe7d4bc92a4fea459f24acb2ec4ceb425f19c4195ec6607669fcbe"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.103/claw-hooks-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "dca43d837557c95a1584db1de55944539bfa30ea49713fcfba8a77bc39a6ba7b"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.104/claw-hooks-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "dc9c758d6569cd06b87a34c7a377aa3949ae2a95f15b5799db5f7626c44b571b"
     else
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.103/claw-hooks-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8c4691ac198ff402cd802ebe367fbd3b6b688a286868b16a49774c5752d7faef"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.2.104/claw-hooks-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "69f608a9acf428dbb48bd9afe2cd1b1e6e748ff2ae4af3817c777b62afd4b7ed"
     end
   end
 
