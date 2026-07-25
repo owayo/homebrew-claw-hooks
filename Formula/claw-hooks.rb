@@ -1,15 +1,15 @@
 class ClawHooks < Formula
   desc "Hooks CLI for AI coding agents (Claude Code, Cursor, Windsurf)"
   homepage "https://github.com/owayo/claw-hooks"
-  url "https://github.com/owayo/claw-hooks/archive/refs/tags/v26.7.101.tar.gz"
-  sha256 "d28b0e52788a5f4012236037d6aa2a90fe1e1091dd6bb86d216605226e9c0991"
+  url "https://github.com/owayo/claw-hooks/archive/refs/tags/v26.7.102.tar.gz"
+  sha256 "aae4769f3a2555f8ee34c0303150dfab85844a3a5383f3f76212f23cdb9655ab"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/owayo/claw-hooks/releases/download/v26.7.101"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7bb2b64b4c53d6ac7e7c883f6741b600a5b4449407a61661e5d415281e6ac321"
-    sha256 cellar: :any_skip_relocation, sonoma: "5f0841f96dbe0a5488639cd047b9441e0d48bbb24c3185d0833583dd53c7f1df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "801f1b7916846e2a69921840fb6fa699204c70c6ecf67d7119daf0444c86e72b"
+    root_url "https://github.com/owayo/claw-hooks/releases/download/v26.7.102"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "ceebfe4e5e88fc5a74a653166bfb836855198da2103f36101cb1afb91c7059c1"
+    sha256 cellar: :any_skip_relocation, sonoma: "932bdbfa058d2d43b77ed04609cc6b6074f8b4637cf42ae5dfb0df09343978e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "dd23c19b7720302e46a28992fdfa61115fa2329add9d1ed19885af9b12b96354"
   end
 
   depends_on "rust" => :build
