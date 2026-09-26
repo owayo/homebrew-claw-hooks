@@ -1,24 +1,33 @@
 class ClawHooks < Formula
   desc "Hooks CLI for Claude Code, Cursor, Windsurf, Antigravity, Codex, and Grok"
   homepage "https://github.com/owayo/claw-hooks"
-  url "https://github.com/owayo/claw-hooks/archive/refs/tags/v26.9.101.tar.gz"
-  sha256 "196de86975c763e8e2282f37aea37c153fd9f285eb55487e069932e1dafdfab4"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/owayo/claw-hooks/releases/download/v26.9.101"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "adce46607f7e388845079ea30a28c067c17d751d2a7a139bfc74a6cc078c4bbc"
-    sha256 cellar: :any_skip_relocation, sonoma: "6fcdae1987aadb30e1c71ad2f4aac9e816b38291fff1e4c47b1702e3d38dcb27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d5c2eb8602d633b1dfa9522544c2aa0c479e3a536145233951b7be910e479b1e"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.102/claw-hooks-aarch64-apple-darwin.tar.gz"
+      sha256 "fe99312194134c5b622470d7f6326ecd7224c5d56313bcc8bfa1ed357e595b94"
+    else
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.102/claw-hooks-x86_64-apple-darwin.tar.gz"
+      sha256 "8197215bf7f9fb3804d5bd84c80ce66232f57f6ae65b6682b8688e95d0e9ae54"
+    end
   end
 
-  depends_on "rust" => :build
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.102/claw-hooks-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "373689e79d4ab69d3e196ca628ce2c158994178b0b9e81b5bad3ddaf6e897c62"
+    else
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.102/claw-hooks-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d05935dcefc3cc7a72c79065269a957263b01ea0a2e3123a9ebedb6726805738"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "claw-hooks"
   end
 
   test do
-    system "#{bin}/claw-hooks", "--version"
+    assert_match version.to_s, shell_output("#{bin}/claw-hooks --version")
   end
 end
