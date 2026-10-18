@@ -5,21 +5,21 @@ class ClawHooks < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.105/claw-hooks-aarch64-apple-darwin.tar.gz"
-      sha256 "4b994e651d53ef52cc25077d5b41123242bf435416da1c015503e5c715c971b8"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.10.100/claw-hooks-aarch64-apple-darwin.tar.gz"
+      sha256 "f6e2ac30942cdd0783705ac23e22b9955c891cdda25c8c7fc854cb72c520a9ed"
     else
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.105/claw-hooks-x86_64-apple-darwin.tar.gz"
-      sha256 "33437841bef240d5d09592bae2aa600c715ff8189c9687822bdad50af55a8cfe"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.10.100/claw-hooks-x86_64-apple-darwin.tar.gz"
+      sha256 "16f374d31ea8fa1fc1faf4e98cf67f1f52b8c9103da01b1f638eca6646fa31d6"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.105/claw-hooks-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "205da074ae088c6a2bb5bb747c5797f43e34ed5517dff7ff0aacdc125402c08c"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.10.100/claw-hooks-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "3df0a82bbcdd363769bfa22f0c5ee500c14ced51ca50e86e3e87dce29fc81199"
     else
-      url "https://github.com/owayo/claw-hooks/releases/download/v26.9.105/claw-hooks-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "cfbd1be4bbdc4f4b5c8554848c3fa57ad817e2f56d9e9b5b1734f532fa862e42"
+      url "https://github.com/owayo/claw-hooks/releases/download/v26.10.100/claw-hooks-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fb1217b7be26d6a858e7178b6a629b99c3f578779035d8293bb8edc83f1efc24"
     end
   end
 
